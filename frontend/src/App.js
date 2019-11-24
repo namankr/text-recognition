@@ -20,7 +20,7 @@ class History extends React.Component {
           <img src={element.image} className="img-rounded img-responsive" alt="not available" /><br />
         </div>
         <div className="col-lg-2" >
-          <p> {element.result} </p>
+          <b> {element.result} </b>
         </div>
       </div>
     );
@@ -134,7 +134,7 @@ class UploadImage extends React.Component {
             {
               this.state.imageText.map((url, i) => (
                 <div className="col-lg-2" key={i}>
-                  <p> {url} </p>
+                  <b> {url} </b>
                 </div>
               ))
             }
