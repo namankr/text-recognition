@@ -6,7 +6,11 @@ const images = require('./images');
 
 const app = express();
 
+const storageService = require('./storage-service');
 
+const config = require('./config');
+
+MongoClient = require('mongodb').MongoClient;
 
 
 app.use(express.static('public'))
@@ -18,7 +22,7 @@ app.post('/upload', images.multer.single('image'), images.sendUploadToGCS, (req,
       let text = await detectText(req.file.cloudStoragePublicUrl);
 
       let schemaParam = { result: text, image: req.file.cloudStoragePublicUrl };
-     // storageService.addToDb(schemaParam);
+      storageService.addToDb(schemaParam);
       res.json({
         imageUrl: req.file.cloudStoragePublicUrl,
         text: text
