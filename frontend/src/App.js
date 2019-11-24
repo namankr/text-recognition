@@ -11,11 +11,29 @@ class App extends Component {
       images: [],
       imageUrls: [],
       imageText: [],
-      message: ''
+      message: '',
+      historyclicked: false,
+      historyArray: [],
     }
   }
+
+
+  getHistory = async (event) => {
+    try {
+      this.setState({ historyclicked: !this.state.historyclicked })
+      let history = await axios.get(`${BASE_URL}all`);
+      this.setState({ historyArray: [...history.data] })
+      //  let his = history.data.map((element,i) => {
+      //  let his = 
+
+      console.log(history, "äll the data");
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   selectImages = (event) => {
-    this.setState({imageUrls: [] , imageText: []});
+    this.setState({ imageUrls: [], imageText: [], historyclicked: false });
     let images = []
     for (var i = 0; i < event.target.files.length; i++) {
       images[i] = event.target.files.item(i);
@@ -50,14 +68,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div class="btn-group">
-          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Large button
-  </button>
-        </div>
         <br />
         <div className="col-sm-12">
           <h3>Upload An Image with Handwritten Text</h3><hr />
+          <div className="headerbutton">
+            <button className="btn-history" type="button" onClick={this.getHistory} >
+              Show History
+          </button>
+          </div>
           <div className="col-sm-4">
             <input className="form-control " type="file"
               onChange={this.selectImages} multiple />
@@ -87,7 +105,28 @@ class App extends Component {
             ))
           }
         </div>
+        <div className="row col-lg-12">
+          {
+            this.state.historyclicked ?
+              this.state.historyArray.map((element, i) => {
+                return (
+
+                  <div className="row col-lg-12" key={i}>
+                    <div className="col-lg-2" >
+                      <img src={element.image} className="img-rounded img-responsive"
+                        alt="not available" /><br />
+                    </div>
+                    <div className="col-lg-2" >
+                      <p> {element.result} </p>
+                    </div>
+                  </div>
+                )
+              })
+              : ''
+          }
+        </div>
       </div>
+
     );
   }
 }

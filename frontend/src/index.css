@@ -12,16 +12,16 @@ code {
     monospace;
 }
 
-.btn-group{
-  margin-top: 15vmin;
-  margin-left: 389vmin;
-  POSITION: absolute;
-  min-height: 12vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.headerbutton {
+  position: absolute;
+  font-weight: bold;
+  bottom: 1vw;
+  right: 0vw;
+  -webkit-border-radius: .5vw;
+  line-height: 4.3vw;
   color: black;
-  
+  background-color: #2486e9;
+  width: 15%;
+  text-align: center;  
+  border: white 1px solid ;    
 }
