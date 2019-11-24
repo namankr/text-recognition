@@ -3,14 +3,11 @@ const cors = require('cors');
 const vision = require('@google-cloud/vision');
 const client = new vision.ImageAnnotatorClient();
 const images = require('./images');
-const storageService = require('./storage-service');
+
 const app = express();
-const jwt = require('jsonwebtoken');
-const config = require('./config');
 
 
 
-MongoClient = require('mongodb').MongoClient;
 
 app.use(express.static('public'))
 app.use(cors());
@@ -43,6 +40,7 @@ async function detectText(req) {
 
   return fullTextAnnotation.text;
 }
+
 
 const PORT = 5000;
 app.listen(PORT);
