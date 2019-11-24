@@ -9,7 +9,7 @@ if not please install from - https://nodejs.org/
 
 Install mongo db client server - https://docs.mongodb.com/manual/
 
-Set GOOGLE_APPLICATION_CREDENTIALS For LINUX OR MACOS
+Set GOOGLE_APPLICATION_CREDENTIALS For LINUX OR MACOS by in shell 
 
 export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
 
@@ -17,11 +17,11 @@ For example:-
 
 export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/[FILE_NAME].json"
 
-Note :- Key File is shared privately 
+Note :- Service Account Key File is shared privately 
 
 Running the server - 
 
-1. open the terminal under folder backend 
+1. open the terminal under folder named backend in the project foler
 
 Type below two commands 
 
@@ -34,7 +34,7 @@ This should start the serving the api's at port 5000
 
 Running the webpage
 
-1. open the terminal under folder frontend
+1. open the terminal under folder frontend in the project foler
 
 Type below two commands 
 
