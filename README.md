@@ -54,7 +54,8 @@ This is still not a production ready code/project as
 
 Home page 
 
-![image](https://user-images.githubusercontent.com/27787096/69495350-17a54800-0eec-11ea-87c0-e0716c0c8ba2.png)
+![image](https://user-images.githubusercontent.com/27787096/69497467-68746b00-0f03-11ea-99c0-4fe00701c851.png)
+
 
 
 History 
