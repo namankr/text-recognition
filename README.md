@@ -21,7 +21,7 @@ Note :- Service Account Key File is shared privately
 
 Running the server - 
 
-1. open the terminal under folder named backend in the project foler
+1. open the terminal under folder named backend in the project folder
 
 Type below two commands 
 
@@ -34,7 +34,7 @@ This should start the serving the api's at port 5000
 
 Running the webpage
 
-1. open the terminal under folder frontend in the project foler
+1. open the terminal under folder frontend in the project folder
 
 Type below two commands 
 
