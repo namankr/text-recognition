@@ -52,9 +52,14 @@ This is still not a production ready code/project as
 
 1. UI Can be improved 
 
+Home page 
+
 ![image](https://user-images.githubusercontent.com/27787096/69495350-17a54800-0eec-11ea-87c0-e0716c0c8ba2.png)
 
 
+History 
+
+![image](https://user-images.githubusercontent.com/27787096/69497449-34994580-0f03-11ea-81bb-26249311a560.png)
 
 
 
