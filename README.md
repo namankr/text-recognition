@@ -1,5 +1,6 @@
 # text-recognition
-detect handwritten text on an image using google's vision api
+
+Detect handwritten text on an image using google's vision api
 
 Getting started !!
 
