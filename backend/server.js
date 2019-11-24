@@ -18,7 +18,7 @@ app.post('/upload', images.multer.single('image'), images.sendUploadToGCS, (req,
       let text = await detectText(req.file.cloudStoragePublicUrl);
 
       let schemaParam = { result: text, image: req.file.cloudStoragePublicUrl };
-      storageService.addToDb(schemaParam);
+     // storageService.addToDb(schemaParam);
       res.json({
         imageUrl: req.file.cloudStoragePublicUrl,
         text: text
