@@ -51,6 +51,9 @@ This is still not a production ready code/project as
 
 1. UI Can be improved 
 
+![image](https://user-images.githubusercontent.com/27787096/69495350-17a54800-0eec-11ea-87c0-e0716c0c8ba2.png)
+
+
 
 
 
